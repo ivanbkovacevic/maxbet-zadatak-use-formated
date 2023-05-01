@@ -11,13 +11,14 @@ export const App = () => {
   const { formatted, sortBy, filter, search } = useFormattedData(usersParsed);
 
   useEffect(() => {
-    sortBy("gender");
+    sortBy("city");
     filter(({ zip }: WholeUser) => zip > 408);
     search("Rickie");
   }, []);
 
   return (
     <div className={style.wrapper}>
+      <h1>useFormated() Test</h1>
       <FilteredResults list={formatted} />
     </div>
   );

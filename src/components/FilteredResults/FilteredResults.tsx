@@ -12,13 +12,13 @@ const FilteredResults: React.FC<FilteredResultsProps> = ({ list }) => {
       {list.length > 0
         ? list.map(
             (
-              { id, firstName, lastName, birthdate, gender }: WholeUser,
+              { id, firstName, lastName, birthdate, gender, city }: WholeUser,
               idx
             ) => (
               <div className={style.item} key={id}>
                 {idx + 1}
                 <div>
-                  {firstName} {lastName} {gender}
+                  {firstName} {lastName} {gender} {city}
                 </div>
                 <div>{birthdate}</div>
               </div>
